@@ -1,0 +1,56 @@
+/* ************************ *
+ * Colores
+ * ************************ */
+// mapa de colores
+$colors: (
+  primary: #1d1c3c,
+  secondary: #57bdc0,
+  danger: #eb5160,
+  dark: #222222,
+  light: #f5f5f5,
+  dull: #8f8f8f,
+  loading: #e5e8e8
+);
+
+// color del fondo
+$bg-color: map-get($colors, light);
+
+// color del texto
+$text-color: map-get($colors, dark);
+
+// color de los bordes
+$border-color: map-get($colors, dull);
+
+// variables de los colores
+$primary-color: map-get($colors, primary);
+$secondary-color: map-get($colors, secondary);
+$danger-color: map-get($colors, danger);
+$dark-color: map-get($colors, dark);
+$light-color: map-get($colors, light);
+$dull-color: map-get($colors, dull);
+$loading-color: map-get($colors, loading);
+
+/* ************************ *
+ * Fuentes
+ * ************************ */
+// fuentes de la aplicación
+$font-family: 'Nunito Sans', 'Open Sans', sans-serif;
+
+// tamano de las fuentes
+$font-size: 16px;
+
+// weight de las fuentes
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 600;
+
+/* ************************ *
+ * Sombras
+ * ************************ */
+$elevation: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+/* ************************ *
+ * INDEX
+ * ************************ */
+$zindex-modal: 9;
+$zindex-menu: 8;

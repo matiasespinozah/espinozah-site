@@ -1,0 +1,17 @@
+@import '~theme/variables';
+
+.container {
+  overflow-x: hidden;
+
+  .espinozah {
+    position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    transition: 1s;
+
+    &.espinozah--hidden {
+      left: 100%;
+    } // .espinozah--hidden
+  } // .header
+} // .container

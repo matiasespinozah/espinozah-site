@@ -1,0 +1,7 @@
+<main class="container">
+  <app-navigation [state]="menuState"></app-navigation>
+
+  <section class="espinozah" [class.espinozah--hidden]="menuState">
+    <app-header (event)="toggleMenu($event)"></app-header>
+  </section>
+</main>
