@@ -1,5 +1,5 @@
 {
-  "name": "espinozah-site",
+  "name": "espinozah",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,10 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "dev:ssr": "ng run espinozah-site:serve-ssr",
-    "serve:ssr": "node dist/espinozah-site/server/main.js",
-    "build:ssr": "ng build && ng run espinozah-site:server",
-    "prerender": "ng run espinozah-site:prerender"
+    "dev:ssr": "ng run espinozah:serve-ssr",
+    "serve:ssr": "node dist/espinozah/server/main.js",
+    "build:ssr": "ng build && ng run espinozah:server",
+    "prerender": "ng run espinozah:prerender"
   },
   "private": true,
   "dependencies": {
