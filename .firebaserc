@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "espinozah-site": {
+      "hosting": {
+        "espinozah": [
+          "espinozah-site"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "espinozah-site"
+  }
+}

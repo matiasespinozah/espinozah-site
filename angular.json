@@ -157,6 +157,22 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "ssr": "cloud-functions",
+            "prerender": true,
+            "firebaseProject": "espinozah-site",
+            "firebaseHostingSite": "espinozah-site",
+            "functionName": "ssr_espinozah",
+            "functionsNodeVersion": "14",
+            "region": "us-west2",
+            "browserTarget": "espinozah:build:production",
+            "serverTarget": "espinozah:server:production",
+            "prerenderTarget": "espinozah:prerender:production",
+            "outputPath": "dist/espinozah/functions"
+          }
         }
       }
     }
