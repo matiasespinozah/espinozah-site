@@ -1,0 +1,79 @@
+@import '~theme/variables';
+@import '~theme/responsive';
+
+.footer {
+  margin-top: 2rem;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include medium {
+    position: absolute;
+    flex-direction: row;
+    padding: 1.25rem 6.25rem;
+    margin-top: 0;
+  } // Medium
+
+  &__social {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .social-item {
+      list-style: none;
+
+      .link {
+        position: relative;
+        margin-right: 1rem;
+        display: inline-block;
+        transform: scale(0.75);
+        opacity: 0.8;
+
+        @include medium {
+          margin-right: 1.5rem;
+        } // Medium
+
+        .img-social {
+          width: 80px;
+          height: 80px;
+
+          @include medium {
+            width: 40px;
+            height: 40px;
+          } // Medium
+        } // .img-social
+      } // .link
+    } // .social-item
+  } // .footer__social
+
+  &__copyright {
+    margin-top: 2rem;
+    font-weight: $weight-bold;
+    color: $dull-color;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include medium {
+      font-size: 1rem;
+      margin-top: 0;
+    } // Medium
+
+    .espinozah-img {
+      width: 140px;
+      margin-left: 1rem;
+
+      @include medium {
+        width: 80px;
+        margin-left: 1rem;
+      } // Medium
+    } // .espinozah-img
+  } // .footer__copyright
+} // .footer

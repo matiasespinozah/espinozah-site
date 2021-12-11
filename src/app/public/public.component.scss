@@ -1,4 +1,5 @@
 @import '~theme/variables';
+@import '~theme/responsive';
 
 .container {
   overflow-x: hidden;
@@ -8,7 +9,38 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
+    padding: 1rem;
     transition: 1s;
+
+    @include medium {
+      padding: 6.25rem;
+    } // end medium
+
+    &__content {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @include medium {
+        margin-top: 0;
+        flex-direction: row;
+      } // end medium
+
+      .img_box {
+        position: relative;
+        border-radius: 50%;
+        min-width: 300px;
+        height: 300px;
+        overflow: hidden;
+
+        @include medium {
+          min-width: 500px;
+          height: 500px;
+        } // end medium
+      } // .img_box
+    } // .espinozah__content
 
     &.espinozah--hidden {
       left: 100%;

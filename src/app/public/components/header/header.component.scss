@@ -1,21 +1,26 @@
 @import '~theme/variables';
+@import '~theme/responsive';
 
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2.5rem 6.25rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
 
+  @include medium {
+    padding: 2.5rem 6.25rem;
+  } // End of @include medium
+
   &__toggle {
     position: relative;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +30,7 @@
     &::before {
       content: '';
       position: absolute;
-      width: 30px;
+      width: 40px;
       height: 4px;
       background-color: $primary-color;
       transform: translateY(-6px);
@@ -35,12 +40,37 @@
     &::after {
       content: '';
       position: absolute;
-      width: 30px;
+      width: 40px;
       height: 4px;
       background-color: $primary-color;
       transform: translateY(6px);
       transition: 0.5s;
     } // .header__toggle::before
+
+    @include medium {
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: $primary-color;
+        transform: translateY(-6px);
+        transition: 0.5s;
+      } // &::before
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: $primary-color;
+        transform: translateY(6px);
+        transition: 0.5s;
+      } // .header__toggle::before
+    } // @include medium
 
     &.header__toggle--active {
       left: -200px;
@@ -56,16 +86,4 @@
       } // end ::after
     } // end header__toggle--active
   } // end header__toggle
-
-  &__button {
-    position: relative;
-    display: inline-block;
-    padding: 0.625rem 1.25rem;
-    text-decoration: none;
-    background-color: $secondary-color;
-    color: $light-color;
-    font-weight: $weight-bold;
-    border-radius: 0.25rem;
-    letter-spacing: 1px;
-  } // end header__button
 } // end header

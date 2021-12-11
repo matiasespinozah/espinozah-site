@@ -1,0 +1,25 @@
+@import '~theme/variables';
+@import '~theme/responsive';
+
+.presentation {
+  max-width: 700px;
+  margin-left: 2.5rem;
+
+  &__title {
+    font-weight: $weight-regular;
+    letter-spacing: 1px;
+    color: $primary-color;
+
+    .name {
+      font-weight: $weight-bold;
+      color: $secondary-color;
+      font-size: 3rem;
+    } // .name
+  } // .presentation__title
+
+  &__desc {
+    color: $dull-color;
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  } // .presentation__desc
+} // presentation

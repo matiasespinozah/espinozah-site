@@ -3,5 +3,15 @@
 
   <section class="espinozah" [class.espinozah--hidden]="menuState">
     <app-header (event)="toggleMenu($event)"></app-header>
+
+    <main class="espinozah__content">
+      <section class="img_box">
+        <img src="assets/img/matias-espinoza.jpeg" class="cover" alt="Matias Espinoza Herrera" />
+      </section>
+
+      <app-presentation></app-presentation>
+    </main>
+
+    <app-footer></app-footer>
   </section>
 </main>
