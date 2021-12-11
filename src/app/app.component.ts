@@ -36,7 +36,7 @@ export class AppComponent {
         ) as Observable<NavigationEnd>
       ).subscribe((event: NavigationEnd) => {
         gtag('config', 'G-GQ9713VGKL', {
-          page_path: event['urlAfterRedirects']
+          page_path: event.urlAfterRedirects
         });
       });
     }
