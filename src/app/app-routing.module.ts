@@ -4,12 +4,11 @@ import { NotFoundComponent } from './shared/pages/not-found/not-found.component'
 
 const routes: Routes = [
   {
-    path: 'inicio',
+    path: '',
     loadChildren: () => import('./public/public.module').then(m => m.PublicModule)
   },
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'not-found', component: NotFoundComponent },
-  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found' }
 ];
 
