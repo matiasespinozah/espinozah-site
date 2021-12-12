@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // services
-import { GoogleAnalyticsService } from '@shared/services';
+import { GoogleAnalyticsService, SeoService } from '@shared/services';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,10 @@ export class AppComponent {
    * constructor
    *
    * @param googleAnalyticsService Servicio de google analitycs
+   * @param seoService Servicio de seo
    */
-  constructor(googleAnalyticsService: GoogleAnalyticsService) {
+  constructor(googleAnalyticsService: GoogleAnalyticsService, seoService: SeoService) {
     googleAnalyticsService.start();
+    seoService.start();
   }
 }

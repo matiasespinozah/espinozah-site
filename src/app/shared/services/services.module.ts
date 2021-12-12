@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 
 // services
 import { GoogleAnalyticsService } from './google-analytics.service';
+import { SeoService } from './seo.service';
 
 @NgModule({
-  providers: [GoogleAnalyticsService]
+  providers: [GoogleAnalyticsService, SeoService]
 })
 export class ServicesModule {}

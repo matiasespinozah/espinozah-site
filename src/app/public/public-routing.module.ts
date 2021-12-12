@@ -11,11 +11,20 @@ const routes: Routes = [
     children: [
       {
         path: 'inicio',
-        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+        data: {
+          title: 'EspinozaH - Inicio',
+          description: 'Matías Espinoza - Software engineer'
+        }
       },
       {
         path: 'pagina-no-encontrada',
-        loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
+        loadChildren: () =>
+          import('./pages/not-found/not-found.module').then(m => m.NotFoundModule),
+        data: {
+          title: 'EspinozaH - Página no encontrada',
+          description: 'Página no encontrada'
+        }
       },
       { path: '', redirectTo: 'inicio', pathMatch: 'full' }
     ]
