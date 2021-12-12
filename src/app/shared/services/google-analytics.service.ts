@@ -8,6 +8,9 @@ import { environment } from '@env/environment';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
+// logger
+import { NGXLogger } from 'ngx-logger';
+
 // gtag from google analytics
 declare var gtag: any;
 
@@ -19,8 +22,9 @@ export class GoogleAnalyticsService {
    * constructor
    *
    * @param router router de angular
+   * @param logger logger de angular
    */
-  constructor(private router: Router) {}
+  constructor(private router: Router, private logger: NGXLogger) {}
 
   /**
    * comienza a escuhar los cambios en las rutas de la aplicacion para notificar a google analytics
@@ -32,10 +36,12 @@ export class GoogleAnalyticsService {
           filter(event => event instanceof NavigationEnd)
         ) as Observable<NavigationEnd>
       ).subscribe((event: NavigationEnd) => {
-        gtag('config', environment.google_analitycs_key, {
+        gtag('config', environment.googleAnalitycsKey, {
           page_path: event.urlAfterRedirects
         });
       });
+    } else {
+      this.logger.info('google analitycs disabled in development mode');
     }
   }
 }

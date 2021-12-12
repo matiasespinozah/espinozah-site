@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  google_analitycs_key: 'G-GQ9713VGKL'
+  googleAnalitycsKey: 'G-GQ9713VGKL',
+  logLevel: 2 // INFO
 };
 
 /*
