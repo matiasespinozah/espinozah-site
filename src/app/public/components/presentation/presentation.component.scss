@@ -19,7 +19,15 @@
 
   &__desc {
     color: $dull-color;
-    font-size: 1.2rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
   } // .presentation__desc
+
+  &__quote {
+    font-size: 1.25rem;
+    font-weight: $weight-bold;
+    color: $secondary-color;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  } // .presentation__quote
 } // presentation
