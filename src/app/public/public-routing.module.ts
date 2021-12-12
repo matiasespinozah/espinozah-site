@@ -13,6 +13,10 @@ const routes: Routes = [
         path: 'inicio',
         loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       },
+      {
+        path: 'pagina-no-encontrada',
+        loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
+      },
       { path: '', redirectTo: 'inicio', pathMatch: 'full' }
     ]
   }

@@ -21,6 +21,7 @@
     "paths": {
       "@admin/*": ["app/admin/*"],
       "@public/*": ["app/public/*"],
+      "@shared/*": ["app/shared/*"],
       "@env/*": ["environments/*"]
     }
   },
